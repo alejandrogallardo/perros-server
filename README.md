@@ -56,5 +56,8 @@ npm install dotenv joi
 nest g res perros
 nest g res personas
 ```
-
+git tag -d nombretag
+git tag -a v1.0.0 -m "Primera version"
+git tag -a v0.1.0 hash -m ""
+git show v1.0.0
 
