@@ -38,7 +38,6 @@ export class PersonasService {
       persona = await this.findOne(id);
     }
     try {
-      persona.updated_at = new Date();
       await persona.updateOne(updatePersonaDto);
       return { ok: true, message: 'Registro actualizado con exito.' };
     } catch (error) {
