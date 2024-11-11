@@ -40,6 +40,21 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Support
+## MONGODB
+```angular2html
+npm i @nestjs/mongoose mongoose
+```
+
+## VALIDACIONES
+```angular2html
+npm install class-validator class-transformer
+npm install dotenv joi
+```
+
+## PERROS
+```angular2html
+nest g res perros
+nest g res personas
+```
 
 
