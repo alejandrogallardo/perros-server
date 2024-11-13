@@ -1,6 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
-@Schema()
+@Schema({ timestamps: true })
 export class Persona extends Document {
   @Prop({
     maxlength: 50,
@@ -22,25 +22,6 @@ export class Persona extends Document {
     required: false,
   })
   telefono: string;
-
-  @Prop()
-  created_at: Date;
-
-  @Prop()
-  updated_at: Date;
 }
 
 export const PersonaSchema = SchemaFactory.createForClass(Persona);
-
-PersonaSchema.pre('save', function (next) {
-  if (!this.created_at) {
-    this.created_at = new Date();
-  }
-  this.updated_at = new Date();
-  next();
-});
-
-PersonaSchema.pre('updateOne', function (next) {
-  this.set({ updated_at: new Date() });
-  next();
-});

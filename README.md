@@ -56,8 +56,17 @@ npm install dotenv joi
 nest g res perros
 nest g res personas
 ```
+## COMANDOS
+```angular2html
 git tag -d nombretag
 git tag -a v1.0.0 -m "Primera version"
 git tag -a v0.1.0 hash -m ""
 git show v1.0.0
+
+docker compose down --volumes
+docker compose up
+
+docker compose -f docker-compose.prod.yml build
+docker compose -f docker-compose.prod.yml up
+```
 
